@@ -1,0 +1,58 @@
+{
+  "homeheader": {
+    "specialty": "Chuyên khoa",
+    "searchs-pecialty": "Tìm chuyên khoa",
+    "health-facilities": "Cơ sở y tế",
+    "select-clinic": "Chọn cơ sở y tế",
+    "doctor": "Bác sĩ",
+    "select-doctor": "Chọn bác sĩ",
+    "pharmacy": "Nhà thuốc",
+    "search-pharmacy": "Tìm nhà thuốc",
+    "support": "Hỗ trợ",
+    "banner-title": "NỀN TẢNG Y TẾ",
+    "banner-sub-title": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+    "welcome": "Xin chào"
+  },
+
+  "menu": {
+    "system": {
+      "header": "Hệ thống",
+      "system-administrator": {
+        "header": "Quản trị hệ thống",
+        "user-manage": "Quản lý người sử dụng",
+        "user-redux": "Quản lý user redux"
+      },
+      "system-parameter": {
+        "header": "Tham số hệ thống"
+      }
+    },
+    "admin": {
+      "manage-user": "Người dùng",
+      "manage-doctor": "Quản lý bác sĩ",
+      "manage-admin": "Quản lý quản trị viên",
+      "crud": "CRUD User",
+      "crud-redux": "CRUD User Redux",
+      "clinic": "Phòng khám",
+      "manage-clinic": "Quản lý phòng khám",
+      "speciality": "Chuyên khoa",
+      "manage-speciality": "Quản lý chuyên khoa",
+      "handbook": "Cẩm nang",
+      "manage-handbook": "Quản lý cẩm nang"
+    }
+  },
+  "manage-user": {
+    "add": "Thêm người dùng",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "first-name": "Tên",
+    "last-name": "Họ",
+    "phone": "Số điện thoại",
+    "address": "Địa chỉ",
+    "gender": "Giới tính",
+    "position": "Chức danh",
+    "role": "Vai trò",
+    "image": "Avatar",
+    "save": "Thêm mới người dùng",
+    "edit": "Lưu thay đổi"
+  }
+}

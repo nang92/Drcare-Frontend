@@ -1,43 +1,64 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import * as actions from "../../store/actions";
+import * as actions from '../../store/actions';
 import Navigator from '../../components/Navigator';
 import { adminMenu } from './menuApp';
+import { LANGUAGES } from '../../utils/constant';
+import { FormattedMessage } from 'react-intl';
 import './Header.scss';
 
 class Header extends Component {
+  handleChangeLanguage = (language) => {
+    this.props.changeLanguageAppRedux(language);
+  };
+  render() {
+    const { processLogout, language, userInfo } = this.props;
 
-    render() {
-        const { processLogout } = this.props;
+    return (
+      <div className="header-container">
+        <div className="header-tabs-container">
+          <Navigator menus={adminMenu} />
+        </div>
+        <div className="languages">
+          <span className="welcome">
+            <FormattedMessage id="homeheader.welcome" />, {userInfo && userInfo.firstName ? userInfo.firstName : ''}!
+          </span>
 
-        return (
-            <div className="header-container">
-                {/* thanh navigator */}
-                <div className="header-tabs-container">
-                    <Navigator menus={adminMenu} />
-                </div>
-
-                {/* nút logout */}
-                <div className="btn btn-logout" onClick={processLogout}>
-                    <i className="fas fa-sign-out-alt"></i>
-                </div>
-            </div>
-        );
-    }
-
+          <div
+            className={language === LANGUAGES.EN ? 'active language-en' : 'language-en'}
+            onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
+          >
+            EN
+          </div>
+          <div
+            className={language === LANGUAGES.DE ? 'active language-de' : 'language-de'}
+            onClick={() => this.handleChangeLanguage(LANGUAGES.DE)}
+          >
+            DE
+          </div>
+          <div className="btn btn-logout" onClick={processLogout} title="Logout">
+            <i className="fas fa-sign-out-alt"></i>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.admin.isLoggedIn
-    };
+const mapStateToProps = (state) => {
+  return {
+    isLoggedIn: state.user.isLoggedIn,
+    language: state.app.language,
+    userInfo: state.user.userInfo,
+  };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        processLogout: () => dispatch(actions.processLogout()),
-    };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    processLogout: () => dispatch(actions.processLogout()),
+    changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language)),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
