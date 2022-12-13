@@ -9,7 +9,7 @@ class ModalEditUser extends Component {
     this.state = {
       id: '',
       email: '',
-      password: '',
+      password: 'hardcode',
       firstName: '',
       lastName: '',
       address: '',
@@ -56,7 +56,7 @@ class ModalEditUser extends Component {
   handleSaveUser = () => {
     let isValid = this.checkValidateInput();
     if (isValid === true) {
-      this.props.editUser(this.state);
+      this.props.doEditUser(this.state);
     }
   };
 

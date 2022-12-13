@@ -38,6 +38,9 @@
       "manage-speciality": "Quản lý chuyên khoa",
       "handbook": "Cẩm nang",
       "manage-handbook": "Quản lý cẩm nang"
+    },
+    "doctor": {
+      "manage-schedule": "Quản lý lịch khám"
     }
   },
   "manage-user": {
@@ -54,5 +57,15 @@
     "image": "Avatar",
     "save": "Thêm mới người dùng",
     "edit": "Lưu thay đổi"
+  },
+  "homepage": {
+    "outstanding-doctor": "Bác sĩ nổi bật trong tuần",
+    "more-info": "Xem thêm"
+  },
+  "manage-schedule": {
+    "title": "Quản lý lịch khám của bác sĩ",
+    "choose-doctor": "Chọn bác sĩ",
+    "choose-date": "Chọn ngày",
+    "save": "Lưu thông tin"
   }
 }

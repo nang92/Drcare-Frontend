@@ -1,16 +1,23 @@
-import { divide } from 'lodash';
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions';
+import { LANGUAGES } from '../../utils/constant';
+import { withRouter } from 'react-router';
+
 import './HomeHeader.scss';
-import logo from '../../assets/images/logo.svg';
 
 class HomeHeader extends Component {
   changeLanguages = (language) => {
     this.props.changeLanguageAppRedux(language);
   };
+
+  returnToHome = () => {
+    if (this.props.history) {
+      this.props.history.push('/home');
+    }
+  };
+
   render() {
     let language = this.props.language;
 
@@ -20,7 +27,7 @@ class HomeHeader extends Component {
           <div className="home-header-content">
             <div className="home-header-content-left">
               <i className="fas fa-bars"></i>
-              <img src={logo} alt="logo" />
+              <span onClick={() => this.returnToHome()}>LOGO</span>
               <div className="header-logo"></div>
             </div>
             <div className="home-header-content-center">
@@ -78,60 +85,62 @@ class HomeHeader extends Component {
             </div>
           </div>
         </div>
-        <div className="home-header-banner">
-          <div className="content-up">
-            <div className="banner-title">
-              <FormattedMessage id="homeheader.banner-title" />
+        {this.props.isShowBanner === true && (
+          <div className="home-header-banner">
+            <div className="content-up">
+              <div className="banner-title">
+                <FormattedMessage id="homeheader.banner-title" />
+              </div>
+              <div className="banner-sub-title">
+                <FormattedMessage id="homeheader.banner-sub-title" />
+              </div>
+              <div className="search">
+                <i className="fas fa-search"></i>
+                <input type="text" placeholder="Search for a clinic ..." />
+              </div>
             </div>
-            <div className="banner-sub-title">
-              <FormattedMessage id="homeheader.banner-sub-title" />
-            </div>
-            <div className="search">
-              <i className="fas fa-search"></i>
-              <input type="text" placeholder="Search for a clinic ..." />
+            <div className="content-down">
+              <div className="options">
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Find a doctor</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Find a doctor</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Find a doctor</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Find a doctor</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Find a doctor</div>
+                </div>
+                <div className="option-child">
+                  <div className="icon-child">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                  <div className="text-child">Find a doctor</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="content-down">
-            <div className="options">
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Find a doctor</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Find a doctor</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Find a doctor</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Find a doctor</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Find a doctor</div>
-              </div>
-              <div className="option-child">
-                <div className="icon-child">
-                  <i className="fas fa-hospital"></i>
-                </div>
-                <div className="text-child">Find a doctor</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
       </>
     );
   }

@@ -38,6 +38,9 @@
       "manage-speciality": "Manage Specialities",
       "handbook": "Handbooks",
       "manage-handbook": "Manage Handbooks"
+    },
+    "doctor": {
+      "manage-schedule": "Manage Schedule"
     }
   },
   "manage-user": {
@@ -54,5 +57,15 @@
     "image": "Avatar",
     "save": "Save Changes",
     "edit": "Edit"
+  },
+  "homepage": {
+    "outstanding-doctor": "Last week's featured Doctors",
+    "more-info": "More Info"
+  },
+  "manage-schedule": {
+    "title": "Manage Schedule of Doctor",
+    "choose-doctor": "Select Doctor",
+    "choose-date": "Choose Date",
+    "save": "Save"
   }
 }

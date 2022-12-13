@@ -85,9 +85,9 @@ class UserManage extends Component {
     });
   };
 
-  editUser = async (data) => {
+  doEditUser = async (user) => {
     try {
-      let response = await editUserService(data);
+      let response = await editUserService(user);
       if (response && response.errCode !== 0) {
         alert(response.errMessage);
       } else {
@@ -115,7 +115,7 @@ class UserManage extends Component {
             isOpen={this.state.isOpenEditModal}
             toggleFormParent={this.toggleEditModal}
             userEdit={this.state.userEdit}
-            editUser={this.editUser}
+            doEditUser={this.doEditUser}
           />
         )}
 
