@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from '../../Homepage/HomeHeader';
 import HomeFooter from '../../Homepage/HomeFooter';
+import DoctorSchedule from './DoctorSchedule';
+import DoctorExtraInfo from './DoctorExtraInfo';
 import { getDetailInfoDoctor } from '../../../services/userService';
+import { LANGUAGES } from '../../../utils/constant';
 import './DetailDoctor.scss';
 
 class DetailDoctor extends Component {
@@ -10,12 +13,16 @@ class DetailDoctor extends Component {
     super(props);
     this.state = {
       detailDoctor: {},
+      currentDoctorId: -1,
     };
   }
 
   async componentDidMount() {
     if (this.props.match && this.props.match.params && this.props.match.params.id) {
       let id = this.props.match.params.id;
+      this.setState({
+        currentDoctorId: id,
+      });
       let response = await getDetailInfoDoctor(id);
       if (response && response.errCode === 0) {
         this.setState({
@@ -28,6 +35,8 @@ class DetailDoctor extends Component {
   componentDidUpdate(prevProps, prevState) {}
 
   render() {
+    let { detailDoctor } = this.state;
+    let { language } = this.props;
     return (
       <>
         <HomeHeader isShowBanner={false} />
@@ -40,7 +49,13 @@ class DetailDoctor extends Component {
               ></div>
               <div className="intro-doctor-right">
                 <div className="intro-doctor-right-top">
-                  {this.state.detailDoctor.firstName} {this.state.detailDoctor.lastName}
+                  <h2>
+                    {this.state.detailDoctor.firstName} {this.state.detailDoctor.lastName}
+                  </h2>
+                  <p>
+                    {this.state.detailDoctor.positionData &&
+                      this.state.detailDoctor.positionData[language === LANGUAGES.EN ? 'valueEn' : 'valueDe']}
+                  </p>
                 </div>
                 <div className="intro-doctor-right-bottom">
                   {this.state.detailDoctor.Markdown && this.state.detailDoctor.Markdown.description && (
@@ -49,7 +64,14 @@ class DetailDoctor extends Component {
                 </div>
               </div>
             </div>
-            <div className="schedule-doctor"></div>
+            <div className="schedule-doctor">
+              <div className="content-left">
+                <DoctorSchedule doctorIdFromParent={this.state.currentDoctorId} />
+              </div>
+              <div className="content-right">
+                <DoctorExtraInfo doctorIdFromParent={this.state.currentDoctorId} />
+              </div>
+            </div>
             <div className="detail-info-doctor">
               {this.state.detailDoctor.Markdown && this.state.detailDoctor.Markdown.contentHTML && (
                 <div dangerouslySetInnerHTML={{ __html: this.state.detailDoctor.Markdown.contentHTML }}></div>
@@ -65,7 +87,9 @@ class DetailDoctor extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    language: state.app.language,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {

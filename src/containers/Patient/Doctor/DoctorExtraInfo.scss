@@ -1,0 +1,20 @@
+.doctor-extra-info-container {
+  padding-left: 15px;
+  padding-top: 20px;
+  .content-up {
+    margin-bottom: 10px;
+    .text-address {
+      text-transform: uppercase;
+      color: #333;
+    }
+    .name-clinic {
+      padding: 5px 0;
+      font-weight: 600;
+      color: #333;
+    }
+    .detail-address {
+      color: #333;
+      font-weight: 600;
+    }
+  }
+}
