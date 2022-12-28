@@ -91,11 +91,9 @@ class ManageDoctor extends Component {
     if (prevProps.language !== this.props.language) {
       let dataSelect = this.buildDataInputSelect(this.props.allDoctors, 'USERS');
       let { resProvince } = this.props.allRequiredDoctorInfo;
-
       let dataSelectProvince = this.buildDataInputSelect(resProvince, 'PROVINCE');
       this.setState({
         listDoctors: dataSelect,
-
         listProvince: dataSelectProvince,
       });
     }

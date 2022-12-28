@@ -300,21 +300,10 @@ export const getRequiredDoctorInfo = () => {
       dispatch({
         type: actionTypes.FETCH_REQUIRED_DOCTOR_INFO_START,
       });
-      let resPrice = await getAllCodeService('PRICE');
-      let resPayment = await getAllCodeService('PAYMENT');
       let resProvince = await getAllCodeService('PROVINCE');
 
-      if (
-        resPrice &&
-        resPrice.errCode === 0 &&
-        resPayment &&
-        resPayment.errCode === 0 &&
-        resProvince &&
-        resProvince.errCode === 0
-      ) {
+      if (resProvince && resProvince.errCode === 0) {
         let data = {
-          resPrice: resPrice.data,
-          resPayment: resPayment.data,
           resProvince: resProvince.data,
         };
 

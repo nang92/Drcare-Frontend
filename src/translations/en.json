@@ -75,6 +75,18 @@
     },
     "extra-info-doctor": {
       "text-address": "Address"
+    },
+    "booking-modal": {
+      "title": "Booking an Appointment",
+      "fullName": "Full Name",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "address": "Address",
+      "birthday": "Date of Birth",
+      "gender": "Sex",
+      "reason": "Reason for Appointment",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
     }
   },
   "admin": {
@@ -84,8 +96,6 @@
       "intro": "Description",
       "add": "Create Info",
       "save": "Save",
-      "price": "Price",
-      "payment": "Payment Method",
       "province": "City",
       "nameClinic": "Clinic Name",
       "addressClinic": "Clinic Address",

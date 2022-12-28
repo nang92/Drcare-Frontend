@@ -1,0 +1,33 @@
+.profile-doctor-container {
+  margin-bottom: 20px;
+  .intro-doctor {
+    display: flex;
+    .intro-doctor-left {
+      width: 25%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    .intro-doctor-right {
+      width: 75%;
+      margin: 5px 10px 0 30px;
+      .intro-doctor-right-top {
+        h2 {
+          font-size: 20px;
+          font-weight: 600;
+          margin: 5px 0;
+        }
+        p {
+          margin: 5px 0;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+      .intro-doctor-right-bottom {
+      }
+    }
+  }
+}

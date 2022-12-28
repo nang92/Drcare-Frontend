@@ -5,6 +5,7 @@ import moment from 'moment';
 import localization from 'moment/locale/de';
 import { LANGUAGES } from '../../../utils/constant';
 import { getScheduleDoctorbyDate } from '../../../services/userService';
+import BookingModal from './Modal/BookingModal';
 import './DoctorSchedule.scss';
 import { FormattedMessage } from 'react-intl';
 
@@ -14,6 +15,8 @@ class DoctorSchedule extends Component {
     this.state = {
       allDays: [],
       allAvailableTime: [],
+      isOpenModalBooking: false,
+      dataScheduleTimeModal: {},
     };
   }
 
@@ -85,8 +88,21 @@ class DoctorSchedule extends Component {
     }
   };
 
+  handelClickScheduleTime = (time) => {
+    this.setState({
+      isOpenModalBooking: true,
+      dataScheduleTimeModal: time,
+    });
+  };
+
+  closeBookingModal = () => {
+    this.setState({
+      isOpenModalBooking: false,
+    });
+  };
+
   render() {
-    let { allDays, allAvailableTime } = this.state;
+    let { allDays, allAvailableTime, dataScheduleTimeModal } = this.state;
     let { language } = this.props;
     return (
       <>
@@ -117,7 +133,11 @@ class DoctorSchedule extends Component {
                 allAvailableTime.map((item, index) => {
                   let timeDisplay = language === LANGUAGES.DE ? item.timeTypeData.valueDe : item.timeTypeData.valueEn;
                   return (
-                    <button key={index} className={language === LANGUAGES.DE ? 'btn-time-de' : 'btn-time-en'}>
+                    <button
+                      key={index}
+                      className={language === LANGUAGES.DE ? 'btn-time-de' : 'btn-time-en'}
+                      onClick={() => this.handelClickScheduleTime(item)}
+                    >
                       {timeDisplay}
                     </button>
                   );
@@ -130,6 +150,11 @@ class DoctorSchedule extends Component {
             </div>
           </div>
         </div>
+        <BookingModal
+          isOpenModal={this.state.isOpenModalBooking}
+          closeBookingModal={this.closeBookingModal}
+          dataTime={dataScheduleTimeModal}
+        />
       </>
     );
   }

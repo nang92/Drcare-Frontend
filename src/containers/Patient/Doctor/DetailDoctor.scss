@@ -9,7 +9,9 @@
       display: flex;
       .intro-doctor-left {
         width: 20%;
-        background: center center no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         width: 150px;
         height: 150px;
         border-radius: 50%;

@@ -75,6 +75,18 @@
     },
     "extra-info-doctor": {
       "text-address": "Địa chỉ"
+    },
+    "booking-modal": {
+      "title": "Đặt lịch khám",
+      "fullName": "Họ và tên",
+      "phoneNumber": "Số điện thoại",
+      "email": "Email",
+      "address": "Địa chỉ",
+      "birthday": "Ghi chú",
+      "gender": "Giới tính",
+      "reason": "Lý do khám",
+      "confirm": "Lưu thông tin",
+      "cancel": "Hủy bỏ"
     }
   },
   "admin": {
@@ -84,8 +96,6 @@
       "intro": "Thông tin giới thiệu",
       "add": "Tạo thông tin",
       "save": "Lưu thông tin",
-      "price": "Giá khám",
-      "payment": "Phương thức thanh toán",
       "province": "Tỉnh/Thành phố",
       "nameClinic": "Tên phòng khám",
       "addressClinic": "Địa chỉ phòng khám",

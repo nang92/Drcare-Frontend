@@ -7,9 +7,7 @@ import './DoctorExtraInfo.scss';
 class DoctorExtraInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isShowDetailInfo: false,
-    };
+    this.state = {};
   }
 
   async componentDidMount() {}
@@ -26,12 +24,6 @@ class DoctorExtraInfo extends Component {
       }
     }
   }
-
-  showHideDetailInfo = (status) => {
-    this.setState({
-      isShowDetailInfo: status,
-    });
-  };
 
   render() {
     let { extraInfo } = this.state;
