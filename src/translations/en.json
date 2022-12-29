@@ -34,8 +34,8 @@
       "crud-redux": "CRUD User Redux",
       "clinic": "Clinics",
       "manage-clinic": "Manage Clinics",
-      "speciality": "Specialities",
-      "manage-speciality": "Manage Specialities",
+      "specialty": "Specialities",
+      "manage-specialty": "Manage Specialities",
       "handbook": "Handbooks",
       "manage-handbook": "Manage Handbooks"
     },
@@ -60,7 +60,8 @@
   },
   "homepage": {
     "outstanding-doctor": "Last week's featured Doctors",
-    "more-info": "More Info"
+    "more-info": "More Info",
+    "specialty-popular": "Popular Specialties"
   },
   "manage-schedule": {
     "title": "Manage Schedule of Doctor",

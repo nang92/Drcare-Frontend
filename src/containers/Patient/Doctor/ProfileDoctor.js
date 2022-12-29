@@ -14,14 +14,14 @@ class ProfileDoctor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataProfie: {},
+      dataProfile: {},
     };
   }
 
   async componentDidMount() {
     let data = await this.getInfoDoctor(this.props.doctorId);
     this.setState({
-      dataProfie: data,
+      dataProfile: data,
     });
   }
 
@@ -46,18 +46,12 @@ class ProfileDoctor extends Component {
 
   renderTimeBooking = (dataTime) => {
     let { language } = this.props;
-    let time = language === LANGUAGES.DE ? dataTime.timeTypeData.valueDe : dataTime.timeTypeData.valueEn;
     if (dataTime && !_.isEmpty(dataTime)) {
+      let time = language === LANGUAGES.DE ? dataTime.timeTypeData.valueDe : dataTime.timeTypeData.valueEn;
       let date =
         language === LANGUAGES.DE
-          ? moment
-              .unix(+dataTime.date / 1000)
-              .locale(language)
-              .format('dddd, DD MMMM YYYY')
-          : moment
-              .unix(+dataTime.date / 1000)
-              .locale(language)
-              .format('dddd, MMMM DD YYYY');
+          ? moment.unix(+dataTime.date / 1000).format('dddd, DD MMMM YYYY')
+          : moment.unix(+dataTime.date / 1000).format('dddd, MMMM DD YYYY');
       return (
         <>
           <div>
@@ -66,21 +60,29 @@ class ProfileDoctor extends Component {
         </>
       );
     }
+    return <></>;
   };
 
   render() {
-    let { dataProfie } = this.state;
+    let { dataProfile } = this.state;
     let { language, dataTime } = this.props;
+    let nameDe = '';
+    let nameEn = '';
+    if (dataProfile && dataProfile.positionData) {
+      nameDe = `${dataProfile.positionData.valueDe}, ${dataProfile.lastName} ${dataProfile.firstName}`;
+      nameEn = `${dataProfile.positionData.valueDe}, ${dataProfile.lastName} ${dataProfile.firstName}`;
+    }
     return (
       <>
         <div className="profile-doctor-container">
           <div className="intro-doctor">
-            <div className="intro-doctor-left" style={{ backgroundImage: `url(${this.state.dataProfie.image})` }}></div>
+            <div
+              className="intro-doctor-left"
+              style={{ backgroundImage: `url(${this.state.dataProfile.image})` }}
+            ></div>
             <div className="intro-doctor-right">
               <div className="intro-doctor-right-top">
-                <h2>
-                  {this.state.dataProfie.firstName} {this.state.dataProfie.lastName}
-                </h2>
+                <h2>{language === LANGUAGES.DE ? nameDe : nameEn}</h2>
               </div>
               <div className="intro-doctor-right-bottom">{this.renderTimeBooking(dataTime)}</div>
             </div>

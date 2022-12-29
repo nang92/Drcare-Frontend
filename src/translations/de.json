@@ -34,8 +34,8 @@
       "crud-redux": "CRUD User Redux",
       "clinic": "Phòng khám",
       "manage-clinic": "Quản lý phòng khám",
-      "speciality": "Chuyên khoa",
-      "manage-speciality": "Quản lý chuyên khoa",
+      "specialty": "Chuyên khoa",
+      "manage-specialty": "Quản lý chuyên khoa",
       "handbook": "Cẩm nang",
       "manage-handbook": "Quản lý cẩm nang"
     },
@@ -60,7 +60,8 @@
   },
   "homepage": {
     "outstanding-doctor": "Bác sĩ nổi bật trong tuần",
-    "more-info": "Xem thêm"
+    "more-info": "Xem thêm",
+    "specialty-popular": "Chuyên khoa phổ biến"
   },
   "manage-schedule": {
     "title": "Quản lý lịch khám của bác sĩ",
@@ -82,7 +83,7 @@
       "phoneNumber": "Số điện thoại",
       "email": "Email",
       "address": "Địa chỉ",
-      "birthday": "Ghi chú",
+      "birthday": "Ngày sinh",
       "gender": "Giới tính",
       "reason": "Lý do khám",
       "confirm": "Lưu thông tin",

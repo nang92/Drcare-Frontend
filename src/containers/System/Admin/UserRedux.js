@@ -84,7 +84,7 @@ class UserRedux extends Component {
       });
     }
   }
-  hanleOnChangeImg = async (e) => {
+  handleOnChangeImg = async (e) => {
     let file = e.target.files[0];
     if (file) {
       let base64 = await CommonUtils.getBase64(file);
@@ -334,7 +334,7 @@ class UserRedux extends Component {
                   </label>
                   <div className="preview-img-container">
                     <div>
-                      <input id="previewImg" type="file" hidden onChange={(e) => this.hanleOnChangeImg(e)} />
+                      <input id="previewImg" type="file" hidden onChange={(e) => this.handleOnChangeImg(e)} />
                       <label htmlFor="previewImg" className=" upload">
                         <i className="fas fa-upload"></i> Upload
                       </label>

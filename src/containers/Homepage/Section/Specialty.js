@@ -2,58 +2,59 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
+import { getAllSpecialties } from '../../../services/userService';
 
 //import './Specialty.scss';
 
 class Specialty extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSpecialty: [],
+    };
+  }
+
+  async componentDidMount() {
+    let res = await getAllSpecialties();
+
+    if (res && res.errCode === 0) {
+      this.setState({
+        dataSpecialty: res.data ? res.data : [],
+      });
+    }
+  }
+
   render() {
+    let { dataSpecialty } = this.state;
     return (
       <>
         <div className="section-share section-specialty">
           <div className="section-container">
             <div className="section-header">
-              <div className="section-title">Bác sĩ nổi bật tuần qua</div>
-              <button className="section-btn">Xem thêm</button>
+              <div className="section-title">
+                <FormattedMessage id="homepage.specialty-popular" />
+              </div>
+              <button className="section-btn">
+                <FormattedMessage id="homepage.more-info" />
+              </button>
             </div>
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
-              <div className="section-customize">
-                <div className="bg-img">
-                  <img src="https://cdn.bookingcare.vn/fr/w300/2019/12/13/120331-co-xuong-khop.jpg" alt="img" />
-                </div>
-                <span>Cơ xương khớp</span>
-              </div>
-              <div className="section-customize">
-                <div className="bg-img">
-                  <img src="https://cdn.bookingcare.vn/fr/w300/2019/12/13/120331-co-xuong-khop.jpg" alt="img" />
-                </div>
-                <span>Cơ xương khớp</span>
-              </div>
-              <div className="section-customize">
-                <div className="bg-img">
-                  <img src="https://cdn.bookingcare.vn/fr/w300/2019/12/13/120331-co-xuong-khop.jpg" alt="img" />
-                </div>
-                <span>Cơ xương khớp</span>
-              </div>
-              <div className="section-customize">
-                <div className="bg-img">
-                  <img src="https://cdn.bookingcare.vn/fr/w300/2019/12/13/120331-co-xuong-khop.jpg" alt="img" />
-                </div>
-                <span>Cơ xương khớp</span>
-              </div>
-              <div className="section-customize">
-                <div className="bg-img">
-                  <img src="https://cdn.bookingcare.vn/fr/w300/2019/12/13/120331-co-xuong-khop.jpg" alt="img" />
-                </div>
-                <span>Cơ xương khớp</span>
-              </div>
-              <div className="section-customize">
-                <div className="bg-img">
-                  <img src="https://cdn.bookingcare.vn/fr/w300/2019/12/13/120331-co-xuong-khop.jpg" alt="img" />
-                </div>
-                <span>Cơ xương khớp</span>
-              </div>
+              {dataSpecialty &&
+                dataSpecialty.length > 0 &&
+                dataSpecialty.map((item, index) => {
+                  return (
+                    <>
+                      <div className="section-customize" key={index}>
+                        <div className="bg-img">
+                          <img src={item.image} alt="" />
+                        </div>
+                      </div>
+                      <span>{item.name}</span>
+                    </>
+                  );
+                })}
             </Slider>
           </div>
         </div>

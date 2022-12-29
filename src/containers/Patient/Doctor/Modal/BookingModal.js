@@ -10,6 +10,7 @@ import { postPatientBookAppointment } from '../../../../services/userService';
 import * as actions from '../../../../store/actions';
 import { LANGUAGES } from '../../../../utils/constant';
 import ProfileDoctor from '../ProfileDoctor';
+import moment from 'moment';
 
 import './BookingModal.scss';
 
@@ -87,14 +88,42 @@ class BookingModal extends Component {
     });
   };
 
-  handelChangeSelect = (selectedOption, id) => {
+  handelChangeSelect = (selectedOption) => {
     this.setState({
       selectedGender: selectedOption,
     });
   };
 
-  hanleComfirmBooking = async () => {
+  buildTimeBooking = (dataTime) => {
+    let { language } = this.props;
+    if (dataTime && !_.isEmpty(dataTime)) {
+      let time = language === LANGUAGES.DE ? dataTime.timeTypeData.valueDe : dataTime.timeTypeData.valueEn;
+      let date =
+        language === LANGUAGES.DE
+          ? moment.unix(+dataTime.date / 1000).format('dddd, DD MMMM YYYY')
+          : moment.unix(+dataTime.date / 1000).format('dddd, MMMM DD YYYY');
+      return `  ${time} - ${date}`;
+    }
+    return '';
+  };
+
+  buildDoctorName = (dataTime) => {
+    let { language } = this.props;
+    if (dataTime && !_.isEmpty(dataTime)) {
+      let name =
+        language === LANGUAGES.DE
+          ? `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
+          : `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`;
+      return name;
+    }
+    return '';
+  };
+
+  handleComfirmBooking = async () => {
     let date = new Date(this.state.birthday).getTime();
+    let timeString = this.buildTimeBooking(this.props.dataTime);
+    let doctorName = this.buildDoctorName(this.props.dataTime);
+
     let res = await postPatientBookAppointment({
       fullName: this.state.fullName,
       phoneNumber: this.state.phoneNumber,
@@ -105,6 +134,9 @@ class BookingModal extends Component {
       selectedGender: this.state.selectedGender.value,
       doctorId: this.state.doctorId,
       timeType: this.state.timeType,
+      language: this.props.language,
+      timeString: timeString,
+      doctorName: doctorName,
     });
 
     if (res && res.errCode === 0) {
@@ -121,6 +153,7 @@ class BookingModal extends Component {
     if (dataTime && !_.isEmpty(dataTime)) {
       doctorId = dataTime.doctorId;
     }
+
     return (
       <>
         <Modal isOpen={isOpenModal} className="booking-modal-container" centered size="lg">
@@ -207,12 +240,16 @@ class BookingModal extends Component {
                   <lable>
                     <FormattedMessage id="patient.booking-modal.reason" />
                   </lable>
-                  <textarea className="form-control" />
+                  <textarea
+                    className="form-control"
+                    value={this.state.reason}
+                    onChange={(e) => this.handleOnChangeInput(e, 'reason')}
+                  />
                 </div>
               </div>
             </div>
             <div className="booking-modal-footer">
-              <button className="btn-primary btn-booking-confirm" onClick={() => this.hanleComfirmBooking()}>
+              <button className="btn-primary btn-booking-confirm" onClick={() => this.handleComfirmBooking()}>
                 <FormattedMessage id="patient.booking-modal.confirm" />
               </button>
               <button className="btn-warning btn-booking-cancel" onClick={closeBookingModal}>
