@@ -1,0 +1,10 @@
+.section-customize {
+  cursor: pointer;
+  .clinic-name {
+    padding: 15px 0 !important;
+    font-weight: 600;
+    &:hover {
+      color: #49bce2;
+    }
+  }
+}

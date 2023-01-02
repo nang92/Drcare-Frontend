@@ -8,6 +8,8 @@ import {
   getTopDoctorHomeService,
   getAllDoctors,
   saveDetailDoctorService,
+  getAllSpecialties,
+  getAllClinic,
 } from '../../services/userService';
 import actionTypes from './actionTypes';
 
@@ -301,10 +303,21 @@ export const getRequiredDoctorInfo = () => {
         type: actionTypes.FETCH_REQUIRED_DOCTOR_INFO_START,
       });
       let resProvince = await getAllCodeService('PROVINCE');
+      let resSpecialty = await getAllSpecialties();
+      let resClinic = await getAllClinic();
 
-      if (resProvince && resProvince.errCode === 0) {
+      if (
+        resProvince &&
+        resProvince.errCode === 0 &&
+        resSpecialty &&
+        resSpecialty.errCode === 0 &&
+        resClinic &&
+        resClinic.errCode === 0
+      ) {
         let data = {
           resProvince: resProvince.data,
+          resSpecialty: resSpecialty.data,
+          resClinic: resClinic.data,
         };
 
         dispatch(fetchRequiredDoctorInfoSuccess(data));

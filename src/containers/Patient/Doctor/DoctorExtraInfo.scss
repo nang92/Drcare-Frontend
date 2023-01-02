@@ -6,15 +6,15 @@
     .text-address {
       text-transform: uppercase;
       color: #333;
+      font-weight: 600;
+      text-decoration: underline;
     }
     .name-clinic {
       padding: 5px 0;
-      font-weight: 600;
       color: #333;
     }
     .detail-address {
       color: #333;
-      font-weight: 600;
     }
   }
 }

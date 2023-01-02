@@ -10,7 +10,16 @@ class DoctorExtraInfo extends Component {
     this.state = {};
   }
 
-  async componentDidMount() {}
+  async componentDidMount() {
+    if (this.props.doctorIdFromParent) {
+      let res = await getExtraInfoDoctorById(this.props.doctorIdFromParent);
+      if (res && res.errCode === 0) {
+        this.setState({
+          extraInfo: res.data,
+        });
+      }
+    }
+  }
 
   async componentDidUpdate(prevProps, prevState) {
     if (this.props.language !== prevProps.language) {
@@ -33,7 +42,7 @@ class DoctorExtraInfo extends Component {
         <div className="doctor-extra-info-container">
           <div className="content-up">
             <div className="text-address">
-              <FormattedMessage id="patient.extra-info-doctor.text-address" />
+              <FormattedMessage id="patient.extra-info-doctor.text-address" />:
             </div>
             <div className="name-clinic">{extraInfo && extraInfo.nameClinic ? extraInfo.nameClinic : ''}</div>
             <div className="detail-address">{extraInfo && extraInfo.addressClinic ? extraInfo.addressClinic : ''}</div>

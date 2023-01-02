@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Select from 'react-select';
-import moment from 'moment';
-import localization from 'moment/locale/de';
-import { LANGUAGES } from '../../../utils/constant';
-import { getProfileDoctorById } from '../../../services/userService';
-import BookingModal from './Modal/BookingModal';
-import './ProfileDoctor.scss';
-import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
+import moment from 'moment';
+import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getProfileDoctorById } from '../../../services/userService';
+import { LANGUAGES } from '../../../utils/constant';
+import './ProfileDoctor.scss';
 
 class ProfileDoctor extends Component {
   constructor(props) {
@@ -33,6 +31,7 @@ class ProfileDoctor extends Component {
         result = res.data;
       }
     }
+
     return result;
   };
 
@@ -65,7 +64,7 @@ class ProfileDoctor extends Component {
 
   render() {
     let { dataProfile } = this.state;
-    let { language, dataTime } = this.props;
+    let { language, dataTime, isShowLinkDetail, doctorId, isShowDescriptionDoctor } = this.props;
     let nameDe = '';
     let nameEn = '';
     if (dataProfile && dataProfile.positionData) {
@@ -76,15 +75,34 @@ class ProfileDoctor extends Component {
       <>
         <div className="profile-doctor-container">
           <div className="intro-doctor">
-            <div
-              className="intro-doctor-left"
-              style={{ backgroundImage: `url(${this.state.dataProfile.image})` }}
-            ></div>
+            <div className="intro-doctor-left">
+              <div className="intro-doctor-left-avatar">
+                <img src={this.state.dataProfile.image} />
+                {isShowLinkDetail === true && (
+                  <div className="more-info">
+                    <Link to={`/detail-doctor/${doctorId}`}>
+                      <FormattedMessage id="patient.detail-doctor.moreInfo" />
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
+
             <div className="intro-doctor-right">
               <div className="intro-doctor-right-top">
                 <h2>{language === LANGUAGES.DE ? nameDe : nameEn}</h2>
               </div>
-              <div className="intro-doctor-right-bottom">{this.renderTimeBooking(dataTime)}</div>
+              <div className="intro-doctor-right-bottom">
+                {isShowDescriptionDoctor === true ? (
+                  <>
+                    {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description && (
+                      <span>{dataProfile.Markdown.description}</span>
+                    )}
+                  </>
+                ) : (
+                  <> {this.renderTimeBooking(dataTime)}</>
+                )}
+              </div>
             </div>
           </div>
         </div>

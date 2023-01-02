@@ -72,7 +72,11 @@
   "patient": {
     "detail-doctor": {
       "schedule": "Schedule",
-      "no-schedule": "The Doctor dosen't have an appointment in this day, please choose another day"
+      "no-schedule": "The Doctor dosen't have an appointment in this day, please choose another day",
+      "moreInfo": "More Info"
+    },
+    "detail-clinic": {
+      "btn-booking": "Appointment"
     },
     "extra-info-doctor": {
       "text-address": "Address"
@@ -100,7 +104,9 @@
       "province": "City",
       "nameClinic": "Clinic Name",
       "addressClinic": "Clinic Address",
-      "note": "Note"
+      "note": "Note",
+      "specialty": "Specialty",
+      "select-clinic": "Select Clinic"
     }
   }
 }
