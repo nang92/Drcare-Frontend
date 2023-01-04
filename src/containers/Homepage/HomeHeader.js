@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { changeLanguageApp } from '../../store/actions';
 import { LANGUAGES } from '../../utils/constant';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 import './HomeHeader.scss';
 
@@ -26,9 +26,7 @@ class HomeHeader extends Component {
         <div className="home-header-container">
           <div className="home-header-content">
             <div className="home-header-content-left">
-              <i className="fas fa-bars"></i>
-              <span onClick={() => this.returnToHome()}>LOGO</span>
-              <div className="header-logo"></div>
+              <div className="header-logo" onClick={() => this.returnToHome()}></div>
             </div>
             <div className="home-header-content-center">
               <div className="child-content">
@@ -88,11 +86,43 @@ class HomeHeader extends Component {
         {this.props.isShowBanner === true && (
           <div className="home-header-banner">
             <div className="content-up">
-              <div className="banner-title">
+              <div className="main-text">
                 <FormattedMessage id="homeheader.banner-title" />
-              </div>
-              <div className="banner-sub-title">
-                <FormattedMessage id="homeheader.banner-sub-title" />
+                <div className="flip">
+                  <div>
+                    <div>einer Zahnärztin</div>
+                  </div>
+                  <div>
+                    <div>einer Orthopädin</div>
+                  </div>
+                  <div>
+                    <div>einer Frauenärztin</div>
+                  </div>
+                  <div>
+                    <div>einem Radiologen</div>
+                  </div>
+                  <div>
+                    <div>einem Hautarzt</div>
+                  </div>
+                  <div>
+                    <div>einem HNO-Arzt</div>
+                  </div>
+                  <div>
+                    <div>einer Frauenärztin</div>
+                  </div>
+                  <div>
+                    <div>einem Kinderarzt</div>
+                  </div>
+                  <div>
+                    <div>einem Heilpraktiker</div>
+                  </div>
+                  <div>
+                    <div>einer Internistin</div>
+                  </div>
+                  <div>
+                    <div>einer Hausärztin</div>
+                  </div>
+                </div>
               </div>
               <div className="search">
                 <i className="fas fa-search"></i>
@@ -105,37 +135,49 @@ class HomeHeader extends Component {
                   <div className="icon-child">
                     <i className="fas fa-hospital"></i>
                   </div>
-                  <div className="text-child">Find a doctor</div>
+                  <div className="text-child">
+                    <FormattedMessage id="homeheader.home-doctor" />
+                  </div>
                 </div>
                 <div className="option-child">
                   <div className="icon-child">
                     <i className="fas fa-hospital"></i>
                   </div>
-                  <div className="text-child">Find a doctor</div>
+                  <div className="text-child">
+                    <FormattedMessage id="homeheader.dentist" />
+                  </div>
                 </div>
                 <div className="option-child">
                   <div className="icon-child">
                     <i className="fas fa-hospital"></i>
                   </div>
-                  <div className="text-child">Find a doctor</div>
+                  <div className="text-child">
+                    <FormattedMessage id="homeheader.orthopedists" />
+                  </div>
                 </div>
                 <div className="option-child">
                   <div className="icon-child">
                     <i className="fas fa-hospital"></i>
                   </div>
-                  <div className="text-child">Find a doctor</div>
+                  <div className="text-child">
+                    <FormattedMessage id="homeheader.gynecologists" />
+                  </div>
                 </div>
                 <div className="option-child">
                   <div className="icon-child">
                     <i className="fas fa-hospital"></i>
                   </div>
-                  <div className="text-child">Find a doctor</div>
+                  <div className="text-child">
+                    <FormattedMessage id="homeheader.radiologists" />
+                  </div>
                 </div>
                 <div className="option-child">
                   <div className="icon-child">
                     <i className="fas fa-hospital"></i>
                   </div>
-                  <div className="text-child">Find a doctor</div>
+                  <div className="text-child">
+                    <FormattedMessage id="homeheader.dermatologists" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,4 +201,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));

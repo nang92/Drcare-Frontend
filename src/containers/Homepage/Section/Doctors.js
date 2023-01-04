@@ -58,12 +58,15 @@ class Doctors extends Component {
                 let nameDe = `${item.positionData.valueDe}, ${item.firstName} ${item.lastName}`;
                 let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
                 return (
-                  <div className="section-customize" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
+                  <div
+                    className="section-customize-doctor"
+                    key={index}
+                    onClick={() => this.handleViewDetailDoctor(item)}
+                  >
                     <div className="bg-img ">
                       <img className="img-doctor my-3" src={imageBase64} alt="doctor" />
                     </div>
                     <h4>{language === LANGUAGES.DE ? nameDe : nameEn}</h4>
-                    <span>Chuyên khoa</span>
                   </div>
                 );
               })}

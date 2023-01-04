@@ -1,112 +1,134 @@
 {
   "homeheader": {
-    "specialty": "Chuyên khoa",
-    "searchs-pecialty": "Tìm chuyên khoa",
-    "health-facilities": "Cơ sở y tế",
-    "select-clinic": "Chọn cơ sở y tế",
-    "doctor": "Bác sĩ",
-    "select-doctor": "Chọn bác sĩ",
-    "pharmacy": "Nhà thuốc",
-    "search-pharmacy": "Tìm nhà thuốc",
-    "support": "Hỗ trợ",
-    "banner-title": "NỀN TẢNG Y TẾ",
-    "banner-sub-title": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
-    "welcome": "Xin chào"
+    "specialty": "Spezialist",
+    "searchs-pecialty": "Suchen Sie nach Spezialisten",
+    "health-facilities": "Klinik",
+    "select-clinic": "Wählen Sie eine Klinik",
+    "doctor": "Arzt-in",
+    "select-doctor": "Wählen Sie einen Arzt",
+    "pharmacy": "Apotheke",
+    "search-pharmacy": "Suchen Sie nach Apotheken",
+    "support": "Unterstützung",
+    "banner-title": "Finden Sie Termine bei",
+    "banner-sub-title": "UMFASSENDE GESUNDHEITSVERSORGUNG",
+    "welcome": "Willkommen",
+    "home-doctor": "Hausärzte",
+    "dentist": "Zahnärzte",
+    "orthopedists": "Orthopäden",
+    "gynecologists": "Frauenärzte",
+    "radiologists": "Radiologen",
+    "dermatologists": "Hautärzte",
+    "ENT-doctors": "HNO-Ärzte",
+    "paediatricians": "Kinderärzte",
+    "naturopath": "Heilpraktiker",
+    "internists": "Internisten"
   },
 
   "menu": {
     "system": {
-      "header": "Hệ thống",
+      "header": "System",
       "system-administrator": {
-        "header": "Quản trị hệ thống",
-        "user-manage": "Quản lý người sử dụng",
-        "user-redux": "Quản lý user redux"
+        "header": "Systemmanagement",
+        "user-manage": "Benutzerverwaltung",
+        "user-redux": "Benutzerverwaltung"
       },
       "system-parameter": {
-        "header": "Tham số hệ thống"
+        "header": "Systemparameter"
       }
     },
     "admin": {
-      "manage-user": "Người dùng",
-      "manage-doctor": "Quản lý bác sĩ",
-      "manage-admin": "Quản lý quản trị viên",
-      "crud": "CRUD User",
-      "crud-redux": "CRUD User Redux",
-      "clinic": "Phòng khám",
-      "manage-clinic": "Quản lý phòng khám",
-      "specialty": "Chuyên khoa",
-      "manage-specialty": "Quản lý chuyên khoa",
-      "handbook": "Cẩm nang",
-      "manage-handbook": "Quản lý cẩm nang"
+      "manage-user": "Benutzerverwaltung",
+      "manage-doctor": "Arztverwaltung",
+      "manage-admin": "Admin-Verwaltung",
+      "crud": "Benutzerliste",
+      "crud-redux": "Benutzerinformationen bearbeiten",
+      "clinic": "Klinik",
+      "manage-clinic": "Klinikverwaltung",
+      "specialty": "Spezialist",
+      "manage-specialty": "Spezialistenverwaltung"
     },
     "doctor": {
-      "manage-schedule": "Quản lý lịch khám"
+      "manage-schedule": "Terminplanung",
+      "manage-patient": "Patientenverwaltung"
     }
   },
   "manage-user": {
-    "add": "Thêm người dùng",
-    "email": "Email",
-    "password": "Mật khẩu",
-    "first-name": "Tên",
-    "last-name": "Họ",
-    "phone": "Số điện thoại",
-    "address": "Địa chỉ",
-    "gender": "Giới tính",
-    "position": "Chức danh",
-    "role": "Vai trò",
+    "title": "Benutzerverwaltung",
+    "add": "Benutzer hinzufügen",
+    "email": "E-mail",
+    "password": "Passwort",
+    "first-name": "Vorname",
+    "last-name": "Nachname",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "gender": "Geschlecht",
+    "position": "Position",
+    "role": "Rolle",
     "image": "Avatar",
-    "save": "Thêm mới người dùng",
-    "edit": "Lưu thay đổi"
+    "save": "Speichern",
+    "edit": "Änderungen speichern"
   },
   "homepage": {
-    "outstanding-doctor": "Bác sĩ nổi bật trong tuần",
-    "more-info": "Xem thêm",
-    "specialty-popular": "Chuyên khoa phổ biến"
+    "outstanding-doctor": "Ausgewählter Arzt der Woche",
+    "more-info": "Mehr sehen",
+    "specialty-popular": "Beliebte Spezialisten",
+    "clinic-popular": "Beliebte Kliniken"
   },
   "manage-schedule": {
-    "title": "Quản lý lịch khám của bác sĩ",
-    "choose-doctor": "Chọn bác sĩ",
-    "choose-date": "Chọn ngày",
-    "save": "Lưu thông tin"
+    "title": "Arzttermin verwalten",
+    "choose-doctor": "Wählen Sie einen Arzt",
+    "choose-date": "Wählen Sie ein Datum",
+    "save": "Speichern"
+  },
+  "manage-patient": {
+    "title": "Patienten Management",
+    "select-date": "Wählen Sie ein Datum",
+    "number": "No.",
+    "time": "Zeit",
+    "patient-name": "Name",
+    "address": "Adresse",
+    "gender": "Geschlecht",
+    "action": "Aktion",
+    "confirm": "Bestätigen"
   },
   "patient": {
     "detail-doctor": {
-      "schedule": "Lịch khám",
-      "no-schedule": "Bác sĩ không có lịch khám trong ngày này, vui lòng chọn ngày khác",
+      "schedule": "Zeitplan",
+      "no-schedule": "Der Arzt hat für diesen Tag keinen Termin, bitte wählen Sie einen anderen Termin",
       "moreInfo": "Mehr sehen"
     },
     "detail-clinic": {
       "btn-booking": "Termin buchen"
     },
     "extra-info-doctor": {
-      "text-address": "Địa chỉ"
+      "text-address": "Adresse"
     },
     "booking-modal": {
-      "title": "Đặt lịch khám",
-      "fullName": "Họ và tên",
-      "phoneNumber": "Số điện thoại",
-      "email": "Email",
-      "address": "Địa chỉ",
-      "birthday": "Ngày sinh",
-      "gender": "Giới tính",
-      "reason": "Lý do khám",
-      "confirm": "Lưu thông tin",
-      "cancel": "Hủy bỏ"
+      "title": "Vereinbare einen Termin",
+      "fullName": "Vollständiger Name",
+      "phoneNumber": "Telefonnummer",
+      "email": "E-mail",
+      "address": "Adresse",
+      "birthday": "Geburtsdatum",
+      "gender": "Geschlecht",
+      "reason": "Gründe für die ärztliche Untersuchung",
+      "confirm": "Bestätigen",
+      "cancel": "Stornieren"
     }
   },
   "admin": {
     "manage-doctor": {
-      "title": "Tạo thêm thông tin Bác Sĩ",
-      "select-doctor": "Chọn Bác Sĩ",
-      "intro": "Thông tin giới thiệu",
-      "add": "Tạo thông tin",
-      "save": "Lưu thông tin",
-      "province": "Tỉnh/Thành phố",
-      "nameClinic": "Tên phòng khám",
-      "addressClinic": "Địa chỉ phòng khám",
-      "note": "Ghi chú",
-      "specialty": "Chuyên khoa",
-      "select-clinic": "Chọn phòng khám"
+      "title": "Weitere Informationen erstellen Arzt",
+      "select-doctor": "Wählen Sie einen Arzt",
+      "intro": "Einführungsinformationen",
+      "add": "Informationen erstellen",
+      "save": "Speichern",
+      "province": "Stadt",
+      "nameClinic": "Name der Klinik",
+      "addressClinic": "Adresse der Klinik",
+      "note": "Hinweis",
+      "specialty": "Spezialist",
+      "select-clinic": "Wählen Sie eine Klinik"
     }
   }
 }

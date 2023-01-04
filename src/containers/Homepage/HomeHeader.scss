@@ -15,16 +15,13 @@
       display: flex;
       align-items: center;
       justify-self: start;
-
-      img {
+      .header-logo {
+        background-image: url(../../assets/images/logo.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 200px;
         height: 100%;
-        width: 60%;
-        cursor: pointer;
-        padding-left: 10px;
-      }
-      i {
-        font-size: 30px;
-        color: grey;
         cursor: pointer;
       }
     }
@@ -33,10 +30,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .sub-title {
-        font-size: 13px;
-        font-weight: 400;
-        color: grey;
+      .child-content {
+        .sub-title {
+          font-size: 13px;
+          font-weight: 400;
+          color: grey;
+        }
       }
     }
     .home-header-content-right {
@@ -98,20 +97,7 @@
     background-image: linear-gradient(rgba(236, 185, 46, 0.25), rgba(255, 255, 255, 0.1));
     height: 65%;
     padding-top: 15px;
-    .banner-title {
-      text-align: center;
-      font-size: 30px;
-      text-shadow: 1px 1px 1px #333;
-      margin-top: 5px;
-      color: #fff;
-      padding-top: 30px;
-    }
-    .banner-sub-title {
-      text-align: center;
-      font-size: 30px;
-      text-shadow: 1px 1px 1px #333;
-      color: #fff;
-    }
+
     .search {
       display: flex;
       justify-content: center;
@@ -121,7 +107,7 @@
       margin-top: 50px;
       padding: 10px;
       border-radius: 25px;
-      background: #f7d800;
+      background: #ffc107;
       input {
         border: none;
         outline: none;
@@ -167,5 +153,78 @@
         }
       }
     }
+  }
+}
+// Animation Text
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.main-text {
+  margin: 0px;
+  font-family: 'Roboto';
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 100px;
+  width: 100%;
+  bottom: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flip {
+  height: 50px;
+  overflow: hidden;
+}
+
+.flip > div > div {
+  color: #fff;
+  padding: 4px 12px;
+  height: 50px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+.flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+.flip div div {
+  background: #42c58a;
+}
+.flip div:first-child div {
+  background: #4ec7f3;
+}
+.flip div:last-child div {
+  background: #dc143c;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
   }
 }

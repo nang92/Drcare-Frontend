@@ -56,11 +56,11 @@ const getProfileDoctorById = (doctorId) => {
 };
 
 const postPatientBookAppointment = (data) => {
-  return axios.post('/api/patient-book-appoinment', data);
+  return axios.post('/api/patient-book-appointment', data);
 };
 
 const postVerifyBookAppoinment = (data) => {
-  return axios.post('/api/verify-book-appoinment', data);
+  return axios.post('/api/verify-book-appointment', data);
 };
 
 const createNewSpecialty = (data) => {
@@ -87,6 +87,14 @@ const getDetailClinicById = (data) => {
   return axios.get(`/api/get-detail-clinic-by-id?id=${data.id}`);
 };
 
+const getAllPatientForDoctor = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`);
+};
+
+const postSendRemedy = (data) => {
+  return axios.post('/api/send-remedy', data);
+};
+
 export {
   handleLoginApi,
   getAllUsers,
@@ -110,4 +118,6 @@ export {
   createNewClinic,
   getAllClinic,
   getDetailClinicById,
+  getAllPatientForDoctor,
+  postSendRemedy,
 };

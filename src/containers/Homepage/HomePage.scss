@@ -82,7 +82,30 @@
           object-fit: cover;
           margin: 0 auto;
           &.img-doctor {
-            border: 5px solid #7fd2dc;
+            border: 1px solid #7fd2dc;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+    .section-customize-doctor {
+      cursor: pointer;
+      border: 1px solid #f7d82f;
+
+      .bg-img {
+        img {
+          width: 370px;
+          height: 200px;
+          object-fit: cover;
+          margin: 0 auto;
+          &.img-doctor {
+            border: 1px solid #7fd2dc;
             border-radius: 50%;
             width: 200px;
             height: 200px;

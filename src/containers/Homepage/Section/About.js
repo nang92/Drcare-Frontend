@@ -8,19 +8,8 @@ class About extends Component {
       <>
         <div className="section-share section-about">
           <div className="section-container">
-            <h2>Truyền thông nói về Dr Care</h2>
             <div className="section-about-content">
-              <div className="section-about-content-left">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/N2wQNNkT-4c?controls=0"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media"
-                  allowfullscreen
-                ></iframe>
-              </div>
+              <div className="section-about-content-left"></div>
               <div className="section-about-content-right">
                 <p>
                   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod debitis nisi molestiae ad repellat

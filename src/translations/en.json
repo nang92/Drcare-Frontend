@@ -9,9 +9,19 @@
     "pharmacy": "Pharmacy",
     "search-pharmacy": "Search Pharmacy",
     "support": "Support",
-    "banner-title": "MEDICAL PLATFORM",
+    "banner-title": "Find appointments at",
     "banner-sub-title": "COMPREHENSIVE HEALTH CARE",
-    "welcome": "Welcome"
+    "welcome": "Welcome",
+    "home-doctor": "Family Doctor",
+    "dentist": "Dentist",
+    "orthopedists": " Orthopedists",
+    "gynecologists": "Gynecologists",
+    "radiologists": "Radiologists",
+    "dermatologists": "Dermatologists",
+    "ENT-doctors": "ENT Doctors",
+    "paediatricians": "Paediatricians",
+    "naturopath": "Naturopath",
+    "internists": "Internists"
   },
 
   "menu": {
@@ -35,15 +45,15 @@
       "clinic": "Clinics",
       "manage-clinic": "Manage Clinics",
       "specialty": "Specialities",
-      "manage-specialty": "Manage Specialities",
-      "handbook": "Handbooks",
-      "manage-handbook": "Manage Handbooks"
+      "manage-specialty": "Manage Specialities"
     },
     "doctor": {
-      "manage-schedule": "Manage Schedule"
+      "manage-schedule": "Manage Schedule",
+      "manage-patient": "Manage Patient"
     }
   },
   "manage-user": {
+    "title": "Manage Users",
     "add": "Add User",
     "email": "Email",
     "password": "Password",
@@ -61,13 +71,25 @@
   "homepage": {
     "outstanding-doctor": "Last week's featured Doctors",
     "more-info": "More Info",
-    "specialty-popular": "Popular Specialties"
+    "specialty-popular": "Popular Specialties",
+    "clinic-popular": "Popular Clinics"
   },
   "manage-schedule": {
     "title": "Manage Schedule of Doctor",
     "choose-doctor": "Select Doctor",
     "choose-date": "Choose Date",
     "save": "Save"
+  },
+  "manage-patient": {
+    "title": "Patient Management",
+    "select-date": "Select Date",
+    "number": "No.",
+    "time": "Time",
+    "patient-name": "Name",
+    "address": "Address",
+    "gender": "Gender",
+    "action": "Action",
+    "confirm": "Confirm"
   },
   "patient": {
     "detail-doctor": {

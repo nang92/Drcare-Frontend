@@ -9,14 +9,14 @@ export const adminMenu = [
       },
       {
         name: 'menu.admin.crud-redux',
-        link: '/system/user-redux',
+        link: '/system/user-edit',
       },
       {
         name: 'menu.admin.manage-doctor',
         link: '/system/manage-doctor',
         /*  subMenus: [
           { name: 'menu.system.system-administrator.user-manage', link: '/system/user-manage' },
-          { name: 'menu.system.system-administrator.user-redux', link: '/system/user-redux' },
+          { name: 'menu.system.system-administrator.user-redux', link: '/system/user-edit' },
         ], */
       },
       //Doctor Management Schedule
@@ -47,16 +47,6 @@ export const adminMenu = [
       },
     ],
   },
-  // Handbook Management
-  {
-    name: 'menu.admin.handbook',
-    menus: [
-      {
-        name: 'menu.admin.manage-handbook',
-        link: '/system/manage-handbook',
-      },
-    ],
-  },
 ];
 export const doctorMenu = [
   //Doctor Management Schedule
@@ -64,8 +54,14 @@ export const doctorMenu = [
     name: 'menu.admin.manage-user',
     menus: [
       {
+        // Doctor Management Schedule
         name: 'menu.doctor.manage-schedule',
         link: '/doctor/manage-schedule',
+      },
+      {
+        // Patient Management
+        name: 'menu.doctor.manage-patient',
+        link: '/doctor/manage-patient',
       },
     ],
   },
