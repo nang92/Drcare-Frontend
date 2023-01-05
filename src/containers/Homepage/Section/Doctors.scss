@@ -1,0 +1,44 @@
+.section-doctors {
+  margin: 0 200px;
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .section-btn {
+      border: none;
+      outline: none;
+      border-radius: 3px;
+    }
+  }
+  .section-body {
+    .section-doctor {
+      .section-customize-doctor {
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #7fd2dc;
+        margin: 5px;
+
+        .bg-img {
+          img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto;
+            border-radius: 50%;
+          }
+        }
+        .doctor-name {
+          font-weight: 600;
+          margin-top: 10px;
+          &:hover {
+            color: #45c3d2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -31,21 +31,53 @@ class MedicalFacility extends Component {
 
   render() {
     let { dataClinics } = this.state;
+    let settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
     return (
       <>
-        <div className="section-share section-medical-facility">
-          <div className="section-container">
-            <div className="section-header">
-              <div className="section-title">
-                <FormattedMessage id="homepage.clinic-popular" />
-              </div>
-              <button className="section-btn">
-                <FormattedMessage id="homepage.more-info" />
-              </button>
-            </div>
+        <div className="section-medical-facility">
+          <div className="section-header">
+            <h3 className="section-title">
+              <FormattedMessage id="homepage.clinic-popular" />
+            </h3>
+            <button className="section-btn">
+              <FormattedMessage id="homepage.more-info" />
+            </button>
           </div>
           <div className="section-body">
-            <Slider {...this.props.settings}>
+            <Slider {...settings}>
               {dataClinics &&
                 dataClinics.length > 0 &&
                 dataClinics.map((item, index) => {

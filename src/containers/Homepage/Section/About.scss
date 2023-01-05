@@ -1,0 +1,129 @@
+.section-about-content {
+  margin: 70px 200px;
+  .content-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: 600;
+    h2 {
+      font-size: 30px;
+      font-weight: 600;
+    }
+    span {
+      font-size: 22px;
+      margin-bottom: 50px;
+    }
+  }
+  .content-items {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+
+    p {
+      padding: 30px;
+      font-size: 16px;
+    }
+  }
+  .content-security {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #e9f7fe, #f6fcfe);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    h3 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    button {
+      background-color: #49bce2;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  .content-for-doctor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    h3 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      color: gray;
+    }
+    ul {
+      font-size: 15px;
+      margin: 20px 0;
+      padding-left: 0;
+      font-weight: 300;
+      li {
+        list-style: none;
+      }
+      i {
+        color: #49bce2;
+        margin-right: 10px;
+        font-size: 16px;
+      }
+    }
+    button {
+      border: 1px solid #49bce2;
+      border-color: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #49bce2;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  .content-help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    .content-help-left {
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+    .content-help-right {
+      button {
+        background-color: #49bce2;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+}

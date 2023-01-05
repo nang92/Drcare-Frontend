@@ -39,7 +39,7 @@ class DetailDoctor extends Component {
     let { language } = this.props;
     return (
       <>
-        <HomeHeader isShowBanner={false} />
+        <HomeHeader />
         <div className="doctor-detail-body">
           <div className="doctor-detail-container">
             <div className="intro-doctor">
