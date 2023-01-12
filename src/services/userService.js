@@ -95,6 +95,10 @@ const postSendRemedy = (data) => {
   return axios.post('/api/send-remedy', data);
 };
 
+const getKeywordClinic = (data) => {
+  return axios.get(`/api/get-keyword-clinic?keyword=${data.keyword}`);
+};
+
 export {
   handleLoginApi,
   getAllUsers,
@@ -120,4 +124,5 @@ export {
   getDetailClinicById,
   getAllPatientForDoctor,
   postSendRemedy,
+  getKeywordClinic,
 };

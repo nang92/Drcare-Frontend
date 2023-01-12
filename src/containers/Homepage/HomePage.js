@@ -24,6 +24,7 @@ class HomePage extends Component {
         <Doctors />
         <Specialty />
         <About />
+        <HomeFooter />
       </div>
     );
   }

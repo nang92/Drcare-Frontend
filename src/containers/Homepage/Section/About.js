@@ -17,29 +17,30 @@ class About extends Component {
           <div className="section-container">
             <div className="section-about-content">
               <div className="content-title">
-                <h2>DrCare</h2>
-                <span>Im Dienste Ihrer Gesundheit</span>
+                <h2>
+                  <FormattedMessage id="about.content-title" />
+                </h2>
+                <span>
+                  <FormattedMessage id="about.content-sub-title" />
+                </span>
               </div>
               <div className="content-items">
                 <div className="content-item">
                   <img src={TerminImg} alt="termin-img" />
                   <p>
-                    Buchen Sie <b>Termine rund um die Uhr online - für sich und Ihre Familie.</b> Bei Bedarf können Sie
-                    Termine einfach verschieben.
+                    <FormattedMessage id="about.content-item1" />
                   </p>
                 </div>
                 <div className="content-item">
                   <img src={DoctorImg} alt="Doctor-img" />
                   <p>
-                    Suchen Sie nach <b>Ärzt:innen und Therapeut:innen in Ihrer Nähe.</b> Verpassen Sie dank
-                    automatischer Erinnerungen keine Termine mehr.
+                    <FormattedMessage id="about.content-item2" />
                   </p>
                 </div>
                 <div className="content-item">
                   <img src={DocumentImg} alt="Document-img" />
                   <p>
-                    Tauschen Sie <b>medizinische Dokumente</b> schnell und sicher mit Ihren Ärzt:innen und
-                    Therapeut:innen aus.
+                    <FormattedMessage id="about.content-item3" />
                   </p>
                 </div>
               </div>

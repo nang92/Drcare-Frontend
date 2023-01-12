@@ -23,6 +23,13 @@
     "naturopath": "Heilpraktiker",
     "internists": "Internisten"
   },
+  "about": {
+    "content-title": "DrCare",
+    "content-sub-title": "Im Dienste Ihrer Gesundheit",
+    "content-item1": "Buchen Sie Termine rund um die Uhr online - für sich und Ihre Familie. Bei Bedarf können Sie Termine einfach verschieben.",
+    "content-item2": "Suchen Sie nach Ärzt:innen und Therapeut:innen in Ihrer Nähe. Verpassen Sie dank automatischer Erinnerungen keine Termine mehr.",
+    "content-item3": "Tauschen Sie medizinische Dokumente schnell und sicher mit Ihren Ärzt:innen und Therapeut:innen aus."
+  },
 
   "menu": {
     "system": {

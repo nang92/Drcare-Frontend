@@ -24,6 +24,13 @@
     "internists": "Internists"
   },
 
+  "about": {
+    "content-title": "DrCare",
+    "content-sub-title": "In the service of your health",
+    "content-item1": "Book appointments online around the clock - for you and your family. If necessary, you can easily reschedule appointments.",
+    "content-item2": "Search for doctors and therapists in your area. Never miss an appointment again thanks to automatic reminders.",
+    "content-item3": "Exchange medical documents quickly and securely with your doctors and therapists."
+  },
   "menu": {
     "system": {
       "header": "System",

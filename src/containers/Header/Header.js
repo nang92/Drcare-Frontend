@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../store/actions';
@@ -9,20 +9,11 @@ import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
 import './Header.scss';
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuApp: [],
-    };
-  }
+const Header = (props) => {
+  const { processLogout, language, userInfo } = props;
+  const [menuApp, setMenuApp] = useState([]);
 
-  handleChangeLanguage = (language) => {
-    this.props.changeLanguageAppRedux(language);
-  };
-
-  componentDidMount() {
-    let { userInfo } = this.props;
+  useEffect(() => {
     let menu = [];
     if (userInfo && !_.isEmpty(userInfo)) {
       let role = userInfo.roleId;
@@ -33,43 +24,42 @@ class Header extends Component {
         menu = doctorMenu;
       }
     }
-    this.setState({
-      menuApp: menu,
-    });
-  }
-  render() {
-    const { processLogout, language, userInfo } = this.props;
+    setMenuApp(menu);
+  }, [userInfo]);
 
-    return (
-      <div className="header-container">
-        <div className="header-tabs-container">
-          <Navigator menus={this.state.menuApp} />
+  const handleChangeLanguage = (language) => {
+    props.changeLanguageAppRedux(language);
+  };
+
+  return (
+    <div className="header-container">
+      <div className="header-tabs-container">
+        <Navigator menus={menuApp} />
+      </div>
+      <div className="languages">
+        <span className="welcome">
+          <FormattedMessage id="homeheader.welcome" />, {userInfo && userInfo.firstName ? userInfo.firstName : ''}!
+        </span>
+
+        <div
+          className={language === LANGUAGES.EN ? 'active language-en' : 'language-en'}
+          onClick={() => handleChangeLanguage(LANGUAGES.EN)}
+        >
+          EN
         </div>
-        <div className="languages">
-          <span className="welcome">
-            <FormattedMessage id="homeheader.welcome" />, {userInfo && userInfo.firstName ? userInfo.firstName : ''}!
-          </span>
-
-          <div
-            className={language === LANGUAGES.EN ? 'active language-en' : 'language-en'}
-            onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
-          >
-            EN
-          </div>
-          <div
-            className={language === LANGUAGES.DE ? 'active language-de' : 'language-de'}
-            onClick={() => this.handleChangeLanguage(LANGUAGES.DE)}
-          >
-            DE
-          </div>
-          <div className="btn btn-logout" onClick={processLogout} title="Logout">
-            <i className="fas fa-sign-out-alt"></i>
-          </div>
+        <div
+          className={language === LANGUAGES.DE ? 'active language-de' : 'language-de'}
+          onClick={() => handleChangeLanguage(LANGUAGES.DE)}
+        >
+          DE
+        </div>
+        <div className="btn btn-logout" onClick={processLogout} title="Logout">
+          <i className="fas fa-sign-out-alt"></i>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from '../../Homepage/HomeHeader';
+import HomeFooter from '../../Homepage/HomeFooter';
 import DoctorSchedule from '../Doctor/DoctorSchedule';
 import DoctorExtraInfo from '../Doctor/DoctorExtraInfo';
 import DetailDoctor from '../Doctor/DetailDoctor';
@@ -148,6 +149,7 @@ class DetailSpecialty extends Component {
             )}
           </div>
         </div>
+        <HomeFooter />
       </div>
     );
   }

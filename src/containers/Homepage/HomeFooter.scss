@@ -1,0 +1,39 @@
+//Home Footer
+.home-footer-top {
+  border-top: 1px solid #45c3d2;
+  padding: 50px 0;
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+}
+
+.home-footer-bottom {
+  background-color: #45c3d2;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
