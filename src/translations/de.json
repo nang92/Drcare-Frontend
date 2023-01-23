@@ -28,7 +28,21 @@
     "content-sub-title": "Im Dienste Ihrer Gesundheit",
     "content-item1": "Buchen Sie Termine rund um die Uhr online - für sich und Ihre Familie. Bei Bedarf können Sie Termine einfach verschieben.",
     "content-item2": "Suchen Sie nach Ärzt:innen und Therapeut:innen in Ihrer Nähe. Verpassen Sie dank automatischer Erinnerungen keine Termine mehr.",
-    "content-item3": "Tauschen Sie medizinische Dokumente schnell und sicher mit Ihren Ärzt:innen und Therapeut:innen aus."
+    "content-item3": "Tauschen Sie medizinische Dokumente schnell und sicher mit Ihren Ärzt:innen und Therapeut:innen aus.",
+    "content-security-title": "Ihre Gesundheit. Ihre Daten.",
+    "content-security-sub-title": "Der Schutz Ihrer Privatsphäre steht für uns im Vordergrund und ist eine unserer wichtigsten Aufgaben.",
+    "content-security-button": "MEHR INFORMATIONEN",
+    "content-for-doctor-title": "Sind Sie Ärzt:in oder Therapeut:in?",
+    "content-for-doctor-sub-title": "Einfaches Terminmanagement für die erfolgreiche Praxis.",
+    "content-doctor-list1": "Entlasten Sie Ihr Praxisteam und bieten Sie Ihren Patient:innen einen zeitgemäßen, digitalen Service",
+    "content-doctor-list2": "Erhöhen Sie die Sichtbarkeit Ihrer Einrichtung im Internet und steigern Sie den Umsatz Ihrer Praxis",
+    "content-doctor-list3": "Impfmanagement: Direkte Entlastung durch digitales Covid-Impfmanagement. Einrichtung in nur 2 Stunden",
+    "content-doctor-list4": "Schaffen Sie effiziente Praxisabläufe und reduzieren Sie Terminausfälle dank digitalem Praxiskalender",
+
+    "content-for-doctor-button": "MEHR ERFAHREN",
+    "content-help-title": "Sie haben eine Frage oder brauchen Hilfe?",
+    "content-help-sub-title": "Erhalten Sie Antworten auf häufig gestellte Fragen in unserem Hilfebereich",
+    "content-help-button": "HILFEBEREICH AUFRUFEN"
   },
 
   "menu": {
@@ -57,6 +71,19 @@
     "doctor": {
       "manage-schedule": "Terminplanung",
       "manage-patient": "Patientenverwaltung"
+    },
+    "clinic": {
+      "title": "KLINIKMANAGEMENT",
+      "address": "Klinikadresse",
+      "name": "Klinikname",
+      "pictrue": "Klinikbild",
+      "save": "Speichern"
+    },
+    "specialty": {
+      "title": "SPEZIALISTENVERWALTUNG",
+      "name": "Spezialist",
+      "pictrue": "Bild",
+      "save": "Speichern"
     }
   },
   "manage-user": {

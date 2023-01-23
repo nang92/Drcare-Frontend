@@ -29,7 +29,21 @@
     "content-sub-title": "In the service of your health",
     "content-item1": "Book appointments online around the clock - for you and your family. If necessary, you can easily reschedule appointments.",
     "content-item2": "Search for doctors and therapists in your area. Never miss an appointment again thanks to automatic reminders.",
-    "content-item3": "Exchange medical documents quickly and securely with your doctors and therapists."
+    "content-item3": "Exchange medical documents quickly and securely with your doctors and therapists.",
+    "content-security-title": "Your Health. Your data.",
+    "content-security-sub-title": "Protecting your privacy is our top priority and one of our most important tasks.",
+    "content-security-button": "MORE INFORMATION",
+    "content-for-doctor-title": "Are you a Doctor or Therapist?",
+    "content-for-doctor-sub-title": "Simple appointment management for a successful practice.",
+    "content-doctor-list1": "Relieve your practice team and offer your patients a modern, digital service",
+    "content-doctor-list2": "Increase the visibility of your institution on the Internet and increase the sales of your practice",
+    "content-doctor-list3": "Impfmanagement: Direkte Entlastung durch digitales Covid-Impfmanagement. Einrichtung in nur 2 Stunden",
+    "content-doctor-list4": "Schaffen Sie effiziente Praxisabläufe und reduzieren Sie Terminausfälle dank digitalem Praxiskalender",
+
+    "content-for-doctor-button": "LEARN MORE",
+    "content-help-title": "Do you have a question or need help?",
+    "content-help-sub-title": "Get answers to frequently asked questions in our help section",
+    "content-help-button": "ACCESS HELP"
   },
   "menu": {
     "system": {
@@ -57,6 +71,20 @@
     "doctor": {
       "manage-schedule": "Manage Schedule",
       "manage-patient": "Manage Patient"
+    },
+    "clinic": {
+      "title": "Clinic Management",
+      "address": "Clinic Address",
+      "name": "Clinic Name",
+      "pictrue": "Clinic Picture",
+      "save": "Save"
+    },
+
+    "specialty": {
+      "title": "Specialities Management",
+      "name": "Specialities Name",
+      "pictrue": "Specialities Picture",
+      "save": "Save"
     }
   },
   "manage-user": {

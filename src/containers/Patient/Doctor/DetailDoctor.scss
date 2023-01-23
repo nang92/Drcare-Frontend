@@ -1,6 +1,5 @@
 .doctor-detail-body {
   background-color: #eef2f7;
-  height: 100vh;
 
   .doctor-detail-container {
     margin: 0px 200px;
@@ -53,5 +52,43 @@
     padding: 30px;
     background-color: #fff;
     border-radius: 5px;
+  }
+}
+
+//Responsvie
+
+@media (max-width: 1550px) {
+  .doctor-detail-body {
+    .doctor-detail-container {
+      margin: 0px 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-detail-body {
+    .doctor-detail-container {
+      .intro-doctor {
+        flex-direction: column;
+        .intro-doctor-left {
+          margin: 0 auto;
+        }
+        .intro-doctor-right {
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+      .schedule-doctor {
+        flex-direction: column;
+        .content-left {
+          width: 100%;
+        }
+        .content-right {
+          width: 100%;
+          border-left: none;
+        }
+      }
+    }
   }
 }

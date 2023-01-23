@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import { createNewSpecialty } from '../../../services/userService';
+import { FormattedMessage } from 'react-intl';
 import { toast } from 'react-toastify';
 import { CommonUtils } from '../../../utils';
 
@@ -72,11 +73,15 @@ class ManageSpecialty extends Component {
     return (
       <>
         <div className="manage-specialty-container">
-          <div className="ms-title">Quan Ly Chuyen Khoa</div>
+          <div className="ms-title">
+            <FormattedMessage id="menu.specialty.title" />
+          </div>
 
           <div className="add-new-specialty row">
             <div className="col-6 form-group">
-              <label>Ten chuyen khoa</label>
+              <label>
+                <FormattedMessage id="menu.specialty.name" />
+              </label>
               <input
                 type="text"
                 className="form-control"
@@ -85,7 +90,9 @@ class ManageSpecialty extends Component {
               />
             </div>
             <div className="col-6 form-group">
-              <label>Anh</label>
+              <label>
+                <FormattedMessage id="menu.specialty.pictrue" />
+              </label>
               <input type="file" className="form-control-file" onChange={(e) => this.handleOnChangeImg(e)} />
             </div>
             <div className="col-12">
@@ -99,7 +106,7 @@ class ManageSpecialty extends Component {
           </div>
           <div className="col-12">
             <button className="btn-save-specialty btn-primary mt-3" onClick={() => this.handleSaveSpecialty()}>
-              Them
+              <FormattedMessage id="menu.specialty.save" />
             </button>
           </div>
         </div>

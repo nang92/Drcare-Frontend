@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import { createNewClinic } from '../../../services/userService';
+import { FormattedMessage } from 'react-intl';
 import { toast } from 'react-toastify';
 import { CommonUtils } from '../../../utils';
 
@@ -73,11 +74,15 @@ class ManageClinic extends Component {
     return (
       <>
         <div className="manage-specialty-container">
-          <div className="ms-title">Quan Ly Phong Kham</div>
+          <div className="ms-title">
+            <FormattedMessage id="menu.clinic.title" />
+          </div>
 
           <div className="add-new-specialty row">
             <div className="col-6 form-group">
-              <label>Ten Phong Kham</label>
+              <label>
+                <FormattedMessage id="menu.clinic.name" />
+              </label>
               <input
                 type="text"
                 className="form-control"
@@ -86,11 +91,15 @@ class ManageClinic extends Component {
               />
             </div>
             <div className="col-6 form-group">
-              <label>Anh</label>
+              <label>
+                <FormattedMessage id="menu.clinic.pictrue" />
+              </label>
               <input type="file" className="form-control-file" onChange={(e) => this.handleOnChangeImg(e)} />
             </div>
             <div className="col-6 form-group">
-              <label>Dia chi phong kham</label>
+              <label>
+                <FormattedMessage id="menu.clinic.address" />
+              </label>
               <input
                 type="text"
                 className="form-control"
@@ -109,7 +118,7 @@ class ManageClinic extends Component {
           </div>
           <div className="col-12">
             <button className="btn-save-specialty btn-primary mt-3" onClick={() => this.handleSaveClinic()}>
-              Them
+              <FormattedMessage id="menu.clinic.save" />
             </button>
           </div>
         </div>

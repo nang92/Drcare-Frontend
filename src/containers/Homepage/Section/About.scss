@@ -127,3 +127,31 @@
     }
   }
 }
+
+// Responsive
+
+@media (max-width: 1550px) {
+  .section-about-content {
+    margin: 70px 20px;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-about-content {
+    .content-items {
+      flex-wrap: wrap;
+    }
+  }
+  .content-security-right {
+    display: none;
+  }
+  .content-for-doctor-right {
+    display: none;
+  }
+  .content-help {
+    flex-wrap: wrap;
+  }
+}

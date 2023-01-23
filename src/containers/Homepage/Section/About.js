@@ -46,12 +46,15 @@ class About extends Component {
               </div>
               <div className="content-security">
                 <div className="content-security-left">
-                  <h3>Ihre Gesundheit. Ihre Daten.</h3>
+                  <h3>
+                    <FormattedMessage id="about.content-security-title" />
+                  </h3>
                   <p>
-                    Der Schutz Ihrer Privatsphäre steht für uns im Vordergrund und ist eine unserer wichtigsten
-                    Aufgaben.
+                    <FormattedMessage id="about.content-security-sub-title" />
                   </p>
-                  <button>mehr informationen</button>
+                  <button>
+                    <FormattedMessage id="about.content-security-button" />
+                  </button>
                 </div>
                 <div className="content-security-right">
                   <img src={SecurityImg} alt="Security-img" />
@@ -59,31 +62,33 @@ class About extends Component {
               </div>
               <div className="content-for-doctor">
                 <div className="content-for-doctor-left">
-                  <h3>Sind Sie Ärzt:in oder Therapeut:in?</h3>
-                  <span>Einfaches Terminmanagement für die erfolgreiche Praxis.</span>
+                  <h3>
+                    <FormattedMessage id="about.content-for-doctor-title" />
+                  </h3>
+                  <span>
+                    <FormattedMessage id="about.content-for-doctor-sub-title" />
+                  </span>
                   <ul>
                     <li>
                       <i class="far fa-clock"></i>
-                      Entlasten Sie Ihr Praxisteam und bieten Sie Ihren Patient:innen einen zeitgemäßen, digitalen
-                      Service
+                      <FormattedMessage id="about.content-doctor-list1" />
                     </li>
                     <li>
                       <i class="far fa-eye"></i>
-                      Erhöhen Sie die Sichtbarkeit Ihrer Einrichtung im Internet und steigern Sie den Umsatz Ihrer
-                      Praxis
+                      <FormattedMessage id="about.content-doctor-list2" />
                     </li>
                     <li>
                       <i class="fas fa-hands"></i>
-                      Impfmanagement: Direkte Entlastung durch digitales Covid-Impfmanagement. Einrichtung in nur 2
-                      Stunden
+                      <FormattedMessage id="about.content-doctor-list3" />
                     </li>
                     <li>
                       <i class="fas fa-home"></i>
-                      Schaffen Sie effiziente Praxisabläufe und reduzieren Sie Terminausfälle dank digitalem
-                      Praxiskalender
+                      <FormattedMessage id="about.content-doctor-list4" />
                     </li>
                   </ul>
-                  <button>mehr erfahren</button>
+                  <button>
+                    <FormattedMessage id="about.content-for-doctor-button" />
+                  </button>
                 </div>
                 <div className="content-for-doctor-right">
                   <img src={DrCareForDoctor} alt="DrCareForDoctor-img" />
@@ -91,11 +96,17 @@ class About extends Component {
               </div>
               <div className="content-help">
                 <div className="content-help-left">
-                  <h3>Sie haben eine Frage oder brauchen Hilfe?</h3>
-                  <p>Erhalten Sie Antworten auf häufig gestellte Fragen in unserem Hilfebereich</p>
+                  <h3>
+                    <FormattedMessage id="about.content-help-title" />
+                  </h3>
+                  <p>
+                    <FormattedMessage id="about.content-help-sub-title" />
+                  </p>
                 </div>
                 <div className="content-help-right">
-                  <button>HILFEBEREICH AUFRUFEN</button>
+                  <button>
+                    <FormattedMessage id="about.content-help-button" />
+                  </button>
                 </div>
               </div>
             </div>

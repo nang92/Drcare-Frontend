@@ -1,6 +1,3 @@
-.home-header-container-mobile {
-  display: none;
-}
 .home-header-container {
   position: sticky;
   top: 0;
@@ -81,6 +78,104 @@
         }
         &:hover {
           opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media (max-width: 1550px) {
+  .home-header-container {
+    .home-header-content {
+      padding: 0 20px;
+      .home-header-content-left {
+        width: 30%;
+        .header-logo {
+          width: 50%;
+        }
+      }
+      .home-header-content-center {
+        width: 40%;
+      }
+      .home-header-content-right {
+        width: 30%;
+        .support {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .home-header-container {
+    .home-header-content {
+      padding: 0 20px;
+      .home-header-content-left {
+        width: 30%;
+        .header-logo {
+          width: 50%;
+        }
+      }
+      .home-header-content-center {
+        width: 40%;
+      }
+      .home-header-content-right {
+        width: 30%;
+        .support {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .home-header-container {
+    .home-header-content {
+      padding: 0 20px;
+      justify-content: space-between;
+      .home-header-content-left {
+        width: 50%;
+        .header-logo {
+          width: 50%;
+          height: 80%;
+        }
+      }
+      .home-header-content-center {
+        display: none;
+      }
+      .home-header-content-right {
+        width: 50%;
+        .support {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .home-header-container {
+    .home-header-content {
+      padding: 0 20px;
+      justify-content: space-between;
+      .home-header-content-left {
+        width: 50%;
+        .header-logo {
+          width: 60%;
+          height: 60%;
+        }
+      }
+      .home-header-content-center {
+        display: none;
+      }
+      .home-header-content-right {
+        width: 50%;
+        .support {
+          display: none;
         }
       }
     }

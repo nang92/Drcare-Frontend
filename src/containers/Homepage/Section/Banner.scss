@@ -143,3 +143,27 @@
     margin-top: -270px;
   }
 }
+
+// Responsive
+
+@media (max-width: 668px) {
+  .home-header-banner {
+    height: 500px;
+    .content-up {
+      .search {
+        input {
+          width: 250px;
+        }
+      }
+    }
+    .content-down {
+      .options {
+        display: none;
+      }
+    }
+  }
+  .main-text {
+    font-size: 30px;
+    padding-top: 50px;
+  }
+}

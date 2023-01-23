@@ -37,3 +37,17 @@
     color: #fff;
   }
 }
+
+//Responsive
+
+@media (max-width: 1550px) {
+  .home-footer-top {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-footer-top {
+    flex-wrap: wrap;
+  }
+}

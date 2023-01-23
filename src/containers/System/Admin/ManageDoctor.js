@@ -214,9 +214,7 @@ class ManageDoctor extends Component {
   handleOnchangeText = (e, id) => {
     let stateCopy = { ...this.state };
     stateCopy[id] = e.target.value;
-    this.setState({
-      ...stateCopy,
-    });
+    this.setState({ ...stateCopy });
   };
 
   render() {
@@ -244,7 +242,7 @@ class ManageDoctor extends Component {
             <textarea
               className="form-control mb-3"
               rows="4"
-              onChange={(e) => this.hanldeOnChangeText(e, 'description')}
+              onChange={(e) => this.handleOnchangeText(e, 'description')}
               value={this.state.description}
             ></textarea>
           </div>

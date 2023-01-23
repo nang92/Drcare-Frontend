@@ -42,3 +42,13 @@
     }
   }
 }
+
+// Responsive
+@media (max-width: 1550px) {
+  .section-doctors {
+    margin: 0 20px;
+  }
+  .section-title {
+    font-size: 16px !important;
+  }
+}

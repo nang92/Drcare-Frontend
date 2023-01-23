@@ -81,3 +81,13 @@
     }
   }
 }
+
+// Responsive
+
+@media (max-width: 1550px) {
+  .detail-clinic-container {
+    .description-clinic-body {
+      margin: 50px 20px;
+    }
+  }
+}
